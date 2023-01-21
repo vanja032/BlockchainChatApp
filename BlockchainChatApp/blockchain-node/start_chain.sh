@@ -7,6 +7,7 @@ nodeos \
   --plugin eosio::chain_api_plugin     \
   --plugin eosio::http_plugin          \
   --plugin eosio::state_history_plugin \
+  --hard-replay-blockchain             \
   --max-transaction-time=50000         \
   --contracts-console   \
   --disable-replay-opts \
