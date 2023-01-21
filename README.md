@@ -45,4 +45,48 @@
   ]
 }
 ```
+  #### Bash commands for pushing the data to the blockchain are:
+  ##### Add new user for the chat
+```
+cleos push action chatapp adduser '["<username>", "<password>", "<user_email>", "<user_first_name>", "<user_last_name>", "<user_picture>"]' -p chatapp@active
+```
+  ##### Add a connection for the user
+```
+cleos push action chatapp addconnect '[<from>, <to>, "<username>", "<password>"]' -p chatapp@active
+```
+  ##### Send a message to the user
+```
+cleos push action chatapp addmessage '[<from>, <to>, "Some message.", "<username>", "<password>"]' -p chatapp@active
+```
+  ##### Remove the user
+```
+cleos push action chatapp removeuser '[<id_for_remove>, "<username>", "<password>"]' -p chatapp@active
+```
+ 
+  #### Web API endpoints for pushing the data to the blockchain are:
+  ##### Add new user for the chat
+```
+http://<server_ip>:33333/adduser
+{"username":"user", "password":"user123", "email":"user@email.com", "f_name":"User First Name", "l_name":"User Last Name", "picture":"Picture url"}
+```
+##### Add a connection for the user
+```
+http://<server_ip>:33333/addconnection
+{"id":"6", "connection":"7", "username":"user", "password":"user123"}
+```
+  ##### Send a message to the user
+```
+http://<server_ip>:33333/addmessage
+{"from":"0", "to":"1", "message":"Some text...", "username":"user", "password":"user123"}
+```
+  ##### Remove the user
+```
+http://<server_ip>:33333/removeuser
+{"id":"1", "username":"user", "password":"user123"}
+```
+  ##### Fetch the user data from the blockchain
+```
+http://<server_ip>:33333/getuser
+{"username":"user", "password":"user123"}
+```
 - Mobile chat app that is written in **Kotlin** and **Java** programming languages in Android Studio engine.
