@@ -1,7 +1,7 @@
 # Blockchain Chat App
 ### Fully developed system for the chat app which is based on the blockchain. The project includes following submodules:
-- Blockchain node with a smart contract that is written in **C++** language for storing messages from the chat app
-- Middleware web server written in **Python** programming language that listens on several endpoints and pushes transactions to the blockchain with encrypted data. <br>
+- **Blockchain node** with a **smart contract** that is written in **C++** language for storing messages from the chat app
+- **Middleware web server** written in **Python** programming language that listens on several endpoints and pushes transactions to the blockchain with encrypted data. <br>
 ***AES*** encryption is used for encrypting the data that uses blockchain chatapp account ***private key*** for the encryption. <br>
  Database model that is used for the app is ***NoSQL*** data model<br>
  The data looks like the following json document:
@@ -89,4 +89,4 @@ http://<server_ip>:33333/removeuser
 http://<server_ip>:33333/getuser
 {"username":"user", "password":"user123"}
 ```
-- Mobile chat app that is written in **Kotlin** and **Java** programming languages in Android Studio engine.
+- **Mobile chat app** that is written in **Kotlin** and **Java** programming languages in Android Studio engine.
