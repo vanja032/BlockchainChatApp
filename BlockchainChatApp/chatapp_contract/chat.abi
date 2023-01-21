@@ -1,0 +1,253 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [
+        {
+            "new_type_name": "time_t",
+            "type": "int32"
+        }
+    ],
+    "structs": [
+        {
+            "name": "Connection",
+            "base": "",
+            "fields": [
+                {
+                    "name": "connection",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "f_name",
+                    "type": "string"
+                },
+                {
+                    "name": "l_name",
+                    "type": "string"
+                },
+                {
+                    "name": "picture",
+                    "type": "string"
+                },
+                {
+                    "name": "time",
+                    "type": "time_t"
+                }
+            ]
+        },
+        {
+            "name": "Message",
+            "base": "",
+            "fields": [
+                {
+                    "name": "subject",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "f_name",
+                    "type": "string"
+                },
+                {
+                    "name": "l_name",
+                    "type": "string"
+                },
+                {
+                    "name": "picture",
+                    "type": "string"
+                },
+                {
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "name": "time",
+                    "type": "time_t"
+                }
+            ]
+        },
+        {
+            "name": "addconnect",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "connection",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "addmessage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "uint64"
+                },
+                {
+                    "name": "to",
+                    "type": "uint64"
+                },
+                {
+                    "name": "message",
+                    "type": "string"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "adduser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                },
+                {
+                    "name": "email",
+                    "type": "string"
+                },
+                {
+                    "name": "f_name",
+                    "type": "string"
+                },
+                {
+                    "name": "l_name",
+                    "type": "string"
+                },
+                {
+                    "name": "picture",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "removeuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "users",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                },
+                {
+                    "name": "email",
+                    "type": "string"
+                },
+                {
+                    "name": "f_name",
+                    "type": "string"
+                },
+                {
+                    "name": "l_name",
+                    "type": "string"
+                },
+                {
+                    "name": "picture",
+                    "type": "string"
+                },
+                {
+                    "name": "connections",
+                    "type": "Connection[]"
+                },
+                {
+                    "name": "messages",
+                    "type": "Message[]"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addconnect",
+            "type": "addconnect",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addmessage",
+            "type": "addmessage",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "adduser",
+            "type": "adduser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "removeuser",
+            "type": "removeuser",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "users",
+            "type": "users",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}

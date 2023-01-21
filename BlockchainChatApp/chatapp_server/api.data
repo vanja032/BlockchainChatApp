@@ -1,0 +1,14 @@
+http://24.135.174.222:33333/addmessage
+{"from":"0", "to":"1", "message":"Neki tekst!", "username":"user", "password":"user123"}
+
+http://24.135.174.222:33333/adduser
+{"username":"puser123", "password":"user123", "email":"user5@email.com", "f_name":"User5", "l_name":"User", "picture":"Picture"}
+
+http://24.135.174.222:33333/getuser
+{"username":"puser12", "password":"user123"}
+
+http://24.135.174.222:33333/addconnection
+{"id":"6", "connection":"7", "username":"puser123", "password":"user123"}
+
+http://24.135.174.222:33333/removeuser
+{"id":"5", "username":"user1234", "password":"user123"}

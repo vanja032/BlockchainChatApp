@@ -1,0 +1,10 @@
+Warning, empty ricardian clause file
+Warning, empty ricardian clause file
+Warning, action <addmessage> does not have a ricardian contract
+Warning, action <adduser> does not have a ricardian contract
+Warning, action <addconnect> does not have a ricardian contract
+Warning, action <removeuser> does not have a ricardian contract
+Warning, action <adduser> does not have a ricardian contract
+Warning, action <addmessage> does not have a ricardian contract
+Warning, action <addconnect> does not have a ricardian contract
+Warning, action <removeuser> does not have a ricardian contract

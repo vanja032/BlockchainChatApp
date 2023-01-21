@@ -1,0 +1,10 @@
+cleos push action chatapp adduser '["user", "user123", "user@email.com", "First name", "Last name", "Picture"]' -p chatapp@active
+cleos push action chatapp addmessage '[1, 0, "Some message.", "user", "user123"]' -p chatapp@active
+cleos push action chatapp addconnect '[1, 0, "user", "user123"]' -p chatapp@active
+cleos push action chatapp removeuser '[2, "user", "user123"]' -p chatapp@active
+cleos push action chatapp getuser '["user", "user123"]' -p chatapp@active
+cleos get table chatapp chatapp users
+eosio-cpp -abigen chat.cpp -o chat.wasm > log.txt
+cleos set contract chatapp -c
+cleos set contract chatapp ./ chat.wasm chat.abi
+scp user@24.135.174.222:/home/chatapp.zip ./

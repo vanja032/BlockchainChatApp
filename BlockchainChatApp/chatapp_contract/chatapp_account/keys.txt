@@ -1,0 +1,5 @@
+Account name: chatapp
+Private key: 5JXtd4JYEHDSURvdT1bZyS7PBJg6V63xgWiSVCnMcvU2upvkGtx
+Public key: EOS4vYfpgunMgXcEC9ahNRqoXMHtYBJG7TwkFzpRpGWK9jFhobcfY
+Tables: ["users"]
+Actions: ["adduser", "addmessage", "addconnect", "removeuser"]
